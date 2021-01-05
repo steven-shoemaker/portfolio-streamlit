@@ -2,21 +2,17 @@ absl-py==0.11.0
 agate==1.6.1
 altair==4.1.0
 amply==0.1.4
-argon2-cffi @ file:///C:/ci/argon2-cffi_1596828585465/work
 arrow==0.17.0
 asgiref==3.3.1
 astor==0.8.1
 astunparse==1.6.3
-attrs @ file:///tmp/build/80754af9/attrs_1600298409949/work
 Babel==2.8.0
 backcall==0.2.0
 base58==2.0.1
 binaryornot==0.4.4
-bleach @ file:///tmp/build/80754af9/bleach_1600439572647/work
 blinker==1.4
 cachetools==4.2.0
 certifi==2020.6.20
-cffi @ file:///C:/ci/cffi_1600699246375/work
 chardet==3.0.4
 click==7.1.2
 colorama==0.4.4
@@ -43,19 +39,14 @@ grpcio==1.32.0
 h5py==2.10.0
 htbuilder==0.3.0
 idna==2.10
-importlib-metadata @ file:///C:/ci/importlib-metadata_1593446511143/work
-ipykernel @ file:///C:/ci/ipykernel_1596190155316/work/dist/ipykernel-5.3.4-py3-none-any.whl
-ipython @ file:///C:/ci/ipython_1598865816163/work
 ipython-genutils==0.2.0
 ipywidgets==7.6.2
 isodate==0.6.0
 iteration-utilities==0.11.0
-jedi @ file:///C:/ci/jedi_1598353661586/work
 Jinja2==2.11.2
 jinja2-time==0.2.0
 joblib==0.16.0
 jsonschema==3.2.0
-jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1594826976318/work
 jupyter-core==4.6.3
 jupyterlab-widgets==1.0.0
 Keras==2.4.3
@@ -72,7 +63,6 @@ mistune==0.8.4
 nbconvert==5.6.1
 nbformat==5.0.7
 nltk==3.5
-notebook @ file:///C:/ci/notebook_1596840175976/work
 numpy==1.19.2
 oauthlib==3.1.0
 opt-einsum==3.3.0
@@ -87,18 +77,14 @@ pickleshare==0.7.5
 Pillow==7.2.0
 poyo==0.5.0
 prometheus-client==0.8.0
-prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1598885458782/work
 protobuf==3.14.0
 PuLP==2.4
 pyarrow==2.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
 pydeck==0.5.0
-Pygments @ file:///tmp/build/80754af9/pygments_1600458456400/work
 pyparsing==2.4.7
 pyportfolioopt==1.2.7
-pyrsistent @ file:///C:/ci/pyrsistent_1600141795814/work
 python-dateutil==2.8.1
 python-slugify==4.0.1
 pytimeparse==1.1.8
@@ -132,14 +118,12 @@ toolz==0.11.1
 torch==1.7.1
 tornado==6.0.4
 tqdm==4.50.0
-traitlets @ file:///tmp/build/80754af9/traitlets_1600712679583/work
 typing-extensions==3.7.4.3
 tzlocal==2.1
 urllib3==1.25.10
 vaderSentiment==3.3.2
 validators==0.18.2
 watchdog==1.0.2
-wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
 webencodings==0.5.1
 Werkzeug==1.0.1
 widgetsnbextension==3.5.1
