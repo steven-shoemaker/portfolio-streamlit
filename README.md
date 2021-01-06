@@ -12,7 +12,7 @@ pandas_datareader==0.9.0
 numpy==1.19.2
 
  
-Just Download the repository, install the necessary libraries and then run
+Just download the repository, install the necessary libraries and then run
  ```python
 streamlit run quant_st.py
 ```
