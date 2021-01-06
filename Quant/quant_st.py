@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 from pypfopt.efficient_frontier import EfficientFrontier
 from pypfopt import risk_models
 from pypfopt import expected_returns
-import SessionState
 
 st.header('Portfolio Optimization Tool')
 st.subheader("This tool is designed to help you determine the optimum distribution of your portfolio based on how much money you have to invest")
