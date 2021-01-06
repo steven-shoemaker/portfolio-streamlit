@@ -1,5 +1,5 @@
 # Portfolio Optimization Tool
-This apop helps you determine where best to invest your money and which stocks you should buy. 
+This app helps you determine where best to invest your money and which stocks you should buy. 
  
 It uses [streamlit](https://streamlit.io) library.
 
