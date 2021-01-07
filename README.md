@@ -5,12 +5,12 @@ It uses [streamlit](https://streamlit.io) library.
 
  ## Requirements
  
+pandas==1.1.4
 streamlit==0.73.1
-matplotlib==3.3.2
-pandas==1.1.2
+matplotlib==3.3.3
 pandas_datareader==0.9.0
-numpy==1.19.2
-
+numpy==1.19.4
+pyportfolioopt==1.2.7
  
 Just download the repository, install the necessary libraries and then run
  ```python
