@@ -18,4 +18,5 @@ streamlit run quant_st.py
 ```
 in your command line and then you can interact with it in your browser.
 
+Special thanks to: randerson112358 for his excellent article on portfolio optimization
 Thank You!
