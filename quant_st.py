@@ -826,7 +826,7 @@ num =1
 weights = np.array([num / size for x in range (size)])
 
 #Get the stock starting date
-stockStartDate = '2013-01-01'
+stockStartDate = '2019-01-1'
 # Get the stocks ending date aka todays date and format it in the form YYYY-MM-DD
 today = datetime.today().strftime('%Y-%m-%d')
 
@@ -834,7 +834,7 @@ today = datetime.today().strftime('%Y-%m-%d')
 df = pd.DataFrame()
 #Store the adjusted close price of stock into the data frame
 for stock in assets:
-        df[stock] = web.DataReader(stock,data_source='yahoo',start='2013-01-01' , end=today)['Adj Close']
+        df[stock] = web.DataReader(stock,data_source='yahoo',start='2018-01-01' , end=today)['Adj Close']
 
 # Create the title 'Portfolio Adj Close Price History
 title = 'Portfolio Price History    '
