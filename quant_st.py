@@ -892,7 +892,7 @@ mu = expected_returns.mean_historical_return(df) #returns.mean() * 252
 S = risk_models.sample_cov(df) #Get the sample covariance matrix
 
 ef = EfficientFrontier(mu, S)
-weights = ef.min_sharpe() #Maximize the Sharpe ratio, and get the raw weights
+weights = ef.max_sharpe() #Maximize the Sharpe ratio, and get the raw weights
 cleaned_weights = ef.clean_weights() 
 ef.portfolio_performance(verbose=True)
 
