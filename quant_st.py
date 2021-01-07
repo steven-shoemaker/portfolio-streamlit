@@ -9,9 +9,17 @@ from pypfopt import risk_models
 from pypfopt import expected_returns
 
 st.header('Portfolio Optimization Tool')
-st.subheader("This tool is designed to help you determine the optimum distribution of your portfolio based on how much money you have to invest and with the lowest amount of risk")
+st.subheader("This tool is designed to help you determine the optimum distribution of your portfolio based on how much money you have to invest, the risk, and the potential return. This is called the Sharpe ratio")
 st.write("Note, the app may encourage you to not select a stock at all depending on the risk of the investment and it's expected return. ")
+with st.beta_expander("What's a Sharpe Ratio?"):
+    st.write(""" The Sharpe ratio was developed by Nobel laureate William F. Sharpe and is used to help investors understand the return of an investment compared to its risk. The ratio is the average return earned in excess of the risk-free rate per unit of volatility or total risk. Volatility is a measure of the price fluctuations of an asset or portfolio.
+
+Subtracting the risk-free rate from the mean return allows an investor to better isolate the profits associated with risk-taking activities. The risk-free rate of return is the return on an investment with zero risk, meaning it's the return investors could expect for taking no risk. The yield for a U.S. Treasury bond, for example, could be used as the risk-free rate.
+
+Generally, the greater the value of the Sharpe ratio, the more attractive the risk-adjusted return """)
+
 # Appends some text to the app.
+
 
 st.sidebar.title("Select your portfolio (Minimum of 3 Stocks)")
 assets = [st.sidebar.multiselect('',[
@@ -884,7 +892,7 @@ mu = expected_returns.mean_historical_return(df) #returns.mean() * 252
 S = risk_models.sample_cov(df) #Get the sample covariance matrix
 
 ef = EfficientFrontier(mu, S)
-weights = ef.max_sharpe() #Maximize the Sharpe ratio, and get the raw weights
+weights = ef.min_sharpe() #Maximize the Sharpe ratio, and get the raw weights
 cleaned_weights = ef.clean_weights() 
 ef.portfolio_performance(verbose=True)
 
