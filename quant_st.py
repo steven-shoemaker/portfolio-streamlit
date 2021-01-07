@@ -12,7 +12,7 @@ st.header('Portfolio Optimization Tool')
 st.subheader("This tool is designed to help you determine the optimum distribution of your portfolio based on how much money you have to invest")
 # Appends some text to the app.
 
-st.sidebar.title("Select your portfolio (Minimum of 5 Stocks)")
+st.sidebar.title("Select your portfolio (Minimum of 3 Stocks)")
 assets = [st.sidebar.multiselect('',[
     'A', 'AA', 'AACG', 'AACQ', 'AACQU', 'AACQW', 'AAIC', 'AAIC.PRB',
     'AAIC.PRC', 'AAL', 'AAMC', 'AAME', 'AAN', 'AAOI', 'AAON', 'AAP', 'AAPL',
@@ -816,12 +816,14 @@ assets = [st.sidebar.multiselect('',[
     'ZGYHW', 'ZI', 'ZION', 'ZIONL', 'ZIONN', 'ZIONO', 'ZIONP', 'ZIOP', 'ZIXI',
     'ZKIN', 'ZLAB', 'ZM', 'ZNGA', 'ZNH', 'ZNTEU', 'ZNTL', 'ZOM', 'ZS', 'ZSAN',
     'ZTO', 'ZTR', 'ZTS', 'ZUMZ', 'ZUO', 'ZVO', 'ZYME', 'ZYNE', 'ZYXI'
-],  default=["AAPL", "NVDA", "AMZN"])]
+],  default=[
+    'APPL', 'AMZN', 'NVDA'
+])]
 
 st.sidebar.title("How much money would you like to invest?")
 money =  st.sidebar.number_input('Input amount in $', min_value=1, max_value=10000000, value=500)
-
-weights = np.array([0.2, 0.2, 0.2, 0.2, 0.2])
+size = len(pd.Series(assets, name='Optimal Buy')[0])
+weights = np.linspace(start=0, stop=1, num=size)
 
 #Get the stock starting date
 stockStartDate = '2013-01-01'
