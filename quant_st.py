@@ -822,7 +822,8 @@ assets = [st.sidebar.multiselect('',[
 st.sidebar.title("How much money would you like to invest?")
 money =  st.sidebar.number_input('Input amount in $', min_value=1, max_value=10000000, value=500)
 size = len(pd.Series(assets, name='Optimal Buy')[0])
-weights = np.linspace(start=0, stop=1, num=size)
+num =1 
+weights = np.array([num / size for x in range (size)])
 
 #Get the stock starting date
 stockStartDate = '2013-01-01'
