@@ -9,7 +9,8 @@ from pypfopt import risk_models
 from pypfopt import expected_returns
 
 st.header('Portfolio Optimization Tool')
-st.subheader("This tool is designed to help you determine the optimum distribution of your portfolio based on how much money you have to invest")
+st.subheader("This tool is designed to help you determine the optimum distribution of your portfolio based on how much money you have to invest and with the lowest amount of risk")
+st.write("Note, the app may encourage you to not select a stock at all depending on the risk of the investment and it's expected return. ")
 # Appends some text to the app.
 
 st.sidebar.title("Select your portfolio (Minimum of 3 Stocks)")
