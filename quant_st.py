@@ -816,9 +816,7 @@ assets = [st.sidebar.multiselect('',[
     'ZGYHW', 'ZI', 'ZION', 'ZIONL', 'ZIONN', 'ZIONO', 'ZIONP', 'ZIOP', 'ZIXI',
     'ZKIN', 'ZLAB', 'ZM', 'ZNGA', 'ZNH', 'ZNTEU', 'ZNTL', 'ZOM', 'ZS', 'ZSAN',
     'ZTO', 'ZTR', 'ZTS', 'ZUMZ', 'ZUO', 'ZVO', 'ZYME', 'ZYNE', 'ZYXI'
-],  default=[
-    'APPL', 'AMZN', 'NVDA'
-])]
+], default=["AAPL", "NVDA", "TGT"])]
 
 st.sidebar.title("How much money would you like to invest?")
 money =  st.sidebar.number_input('Input amount in $', min_value=1, max_value=10000000, value=500)
