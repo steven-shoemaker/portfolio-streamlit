@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from pypfopt.efficient_frontier import EfficientFrontier
 from pypfopt import risk_models
 from pypfopt import expected_returns
+from pypfopt import objective_functions
 
 st.header('Portfolio Optimization Tool')
 st.subheader("This tool is designed to help you determine the optimum distribution of your portfolio based on how much money you have to invest, the risk, and the potential return.  It is designed to optimize on the max Sharpe Ratio.")
@@ -888,11 +889,15 @@ with col1:
     st.subheader('Annual variance : ')
     st.write(percent_var)
 
-mu = expected_returns.mean_historical_return(df) #returns.mean() * 252
+mu = expected_returns.mean_historical_return(df, compounding=True) #returns.mean() * 252
 S = risk_models.sample_cov(df) #Get the sample covariance matrix
 
 ef = EfficientFrontier(mu, S)
-weights = ef.max_sharpe() #Maximize the Sharpe ratio, and get the raw weights
+weights =  ef.nonconvex_objective(
+        objective_functions.sharpe_ratio,
+        objective_args=(ef.expected_returns, ef.cov_matrix),
+        weights_sum_to_one=True,
+    ) #Maximize the Sharpe ratio, and get the raw weights
 cleaned_weights = ef.clean_weights() 
 ef.portfolio_performance(verbose=True)
 
